@@ -1,0 +1,66 @@
+.certifications__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+}
+
+.certification__item {
+  background: linear-gradient(to bottom right, red, blue);
+  padding: 1.3rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  height: 400px;
+}
+
+.certification__item:hover {
+  border-color: var(--color-primary-variant);
+  background: linear-gradient(to bottom right, red 10%, black 60%);
+}
+
+.certification__item-image {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  height: 30%;
+}
+
+.certification__item h3 {
+  margin: 2rem 0;
+}
+
+.certification__item p {
+  margin: 0 0 1.2rem 0;
+  font-size: 0.9rem;
+}
+
+.certification__item-cta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.portfolio__item-content {
+  height: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+  .certifications__container {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .certifications__container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+/* Media query for extremely small screens, e.g., less than 400px wide */
+@media screen and (max-width: 400px) {
+  .certifications__container {
+    grid-template-columns: 1fr; /* Single column for extremely small screens */
+    gap: 0.8rem; /* Adjust the gap as needed */
+  }
+}
